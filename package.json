@@ -2,7 +2,7 @@
   "name": "statsd-fs",
   "version": "0.0.0",
   "description": "File system based backend for StatsD and express app",
-  "main": "./statsd-backend.js",
+  "main": "index.js",
   "directories": {
     "doc": "docs"
   },

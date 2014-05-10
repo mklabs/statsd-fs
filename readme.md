@@ -101,7 +101,7 @@ Ex:
 ### FSBackend
 
 ```js
-var FSBackend = require('statsd-fs');
+var FSBackend = require('statsd-fs').FSBackend;
 
 // Statsd will create the backend using something like
 var backend = new FSBackend(startupTime, config, events);
@@ -118,7 +118,7 @@ backend.on('status', console.log.bind(console', 'Status: '));
 The express application.
 
 ```js
-var statsd = require('statsd-fs/app');
+var statsd = require('statsd-fs').app;
 
 // Attach to your top level express app
 app.use('/statsd', statsd.middleware({
@@ -141,7 +141,7 @@ Is using [node-glob](https://github.com/isaacs/node-glob) to perform the
 file macthes.
 
 ```js
-var Sets = require('./sets');
+var Sets = require('statsd-fs').Sets;
 
 var sets = new Sets('./path/to/db', {
   from: '7d'

@@ -15,12 +15,7 @@ var EventEmitter = require('events').EventEmitter;
 // Based off statsd console backend, this implementation uses a local
 // directory to persist metrics in JSON
 module.exports = FSBackend;
-
-// Statsd entry point
-FSBackend.init = function init(startupTime, config, events) {
-  var instance = new FSBackend(startupTime, config, events);
-  return true;
-};
+FSBackend.app = require('./app');
 
 function isNotNaN(num) { return !isNaN(num); }
 

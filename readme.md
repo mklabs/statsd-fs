@@ -106,10 +106,10 @@ var FSBackend = require('statsd-fs');
 // Statsd will create the backend using something like
 var backend = new FSBackend(startupTime, config, events);
 
-// It is en EventEmitter, and events from statsd are propagated to the
+// It is an EventEmitter, and events from statsd are propagated to the
 // backend instance
 
-backend.on('flush', console.log.bind(console', 'Flushed: '));
+backend.on('flush', console.log.bind(console, 'Flushed: '));
 backend.on('status', console.log.bind(console', 'Status: '));
 ```
 
